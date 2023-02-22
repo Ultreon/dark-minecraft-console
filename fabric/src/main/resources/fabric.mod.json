@@ -1,48 +1,40 @@
 {
   "schemaVersion": 1,
-  "id": "template",
+  "id": "dark_console",
   "version": "${version}",
-  "name": "Template Mod",
-  "description": "A descriptive explanation on what this mod does.",
+  "name": "Dark Minecraft Console",
+  "description": "Makes the Minecraft server console use dark mode.",
   "authors": [
     "Ultreon Team"
   ],
   "contributors": [
-    "Qboi",
-    "JPT79",
-    "Laz"
+    "Qboi"
   ],
   "contact": {
-    "website": "https://example.com",
-    "repo": "https://github.com/Ultreon/kotlin-architectury-template",
-    "issues": "https://github.com/Ultreon/kotlin-architectury-template/issues"
+    "website": "https://ultreon.github.io/",
+    "repo": "https://github.com/Ultreon/dark-minecraft-console",
+    "issues": "https://github.com/Ultreon/dark-minecraft-console/issues"
   },
   "license": "All-Rights-Reserved",
-  "icon": "assets/template/icon.png",
-  "environment": "*",
+  "icon": "assets/dark_console/icon.png",
+  "environment": "server",
   "entrypoints": {
     "main": [
       {
         "adapter": "kotlin",
-        "value": "com.example.template.fabric.TemplateFabric"
-      }
-    ],
-    "client": [
-      {
-        "adapter": "kotlin",
-        "value": "com.example.template.fabric.TemplateFabricClient"
+        "value": "com.ultreon.mods.darkconsole.fabric.TemplateFabric"
       }
     ],
     "server": [
       {
         "adapter": "kotlin",
-        "value": "com.example.template.fabric.TemplateFabricServer"
+        "value": "com.ultreon.mods.darkconsole.fabric.TemplateFabricServer"
       }
     ]
   },
   "mixins": [
-    "template.mixins.json",
-    "template-common.mixins.json"
+    "dark-console.mixins.json",
+    "dark-console-common.mixins.json"
   ],
   "recommends": {
     "modmenu": ">=5.0.0"

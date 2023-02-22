@@ -25,6 +25,14 @@ classes {
     finalizedBy("copyKotlinClasses")
 }
 
+loom {
+    runs {
+        server {
+            programArgs.remove("nogui")
+        }
+    }
+}
+
 tasks.register("copyKotlinClasses") {
     doLast {
         copy {
@@ -76,6 +84,9 @@ dependencies {
 
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":common", configuration: "transformProductionFabric")) { transitive false }
+
+    include implementation("com.formdev:flatlaf:$flatlaf_version")
+    include implementation("com.formdev:flatlaf-intellij-themes:$flatlaf_version")
 
     // Essential mods.
     modImplementation "com.terraformersmc:modmenu:5.0.2", {

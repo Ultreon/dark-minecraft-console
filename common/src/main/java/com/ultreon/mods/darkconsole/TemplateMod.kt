@@ -1,4 +1,4 @@
-package com.example.template
+package com.ultreon.mods.darkconsole
 
 import dev.architectury.event.events.common.LifecycleEvent
 import org.slf4j.Logger
@@ -8,7 +8,7 @@ object TemplateMod {
     val logger: Logger = LoggerFactory.getLogger("TemplateMod")
 
     fun init() {
-        LifecycleEvent.SETUP.register(::setup)
+        LifecycleEvent.SETUP.register(TemplateMod::setup)
     }
 
     private fun setup() {

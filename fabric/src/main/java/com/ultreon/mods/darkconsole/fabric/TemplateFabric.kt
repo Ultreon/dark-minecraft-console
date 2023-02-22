@@ -1,6 +1,6 @@
-package com.example.template.fabric
+package com.ultreon.mods.darkconsole.fabric
 
-import com.example.template.TemplateMod
+import com.ultreon.mods.darkconsole.TemplateMod
 import net.fabricmc.api.ModInitializer
 
 @Suppress("unused")

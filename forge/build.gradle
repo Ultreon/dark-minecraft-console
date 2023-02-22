@@ -24,6 +24,14 @@ classes {
     finalizedBy("copyKotlinClasses")
 }
 
+loom {
+    runs {
+        server {
+            programArgs.remove("nogui")
+        }
+    }
+}
+
 tasks.register("copyKotlinClasses") {
     doLast {
         copy {
@@ -68,6 +76,9 @@ dependencies {
 
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":common", configuration: "transformProductionForge")) { transitive = false }
+
+    include forgeRuntimeLibrary("com.formdev:flatlaf:$flatlaf_version")
+    include forgeRuntimeLibrary("com.formdev:flatlaf-intellij-themes:$flatlaf_version")
 
     // Adds KFF as dependency and Kotlin libs
     modImplementation 'thedarkcolour:kotlinforforge:3.8.0'

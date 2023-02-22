@@ -1,10 +1,10 @@
-package com.example.template.server
+package com.ultreon.mods.darkconsole.server
 
 import dev.architectury.event.events.common.LifecycleEvent
 
 object TemplateModServer {
     fun init() {
-        LifecycleEvent.SETUP.register(::setup)
+        LifecycleEvent.SETUP.register(TemplateModServer::setup)
     }
 
     private fun setup() {

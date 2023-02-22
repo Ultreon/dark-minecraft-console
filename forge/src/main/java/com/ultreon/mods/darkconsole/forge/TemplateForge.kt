@@ -1,10 +1,10 @@
 @file:Suppress("removal")
 
-package com.example.template.forge
+package com.ultreon.mods.darkconsole.forge
 
-import com.example.template.TemplateMod
-import com.example.template.client.TemplateModClient
-import com.example.template.server.TemplateModServer
+import com.ultreon.mods.darkconsole.TemplateMod
+import com.ultreon.mods.darkconsole.client.TemplateModClient
+import com.ultreon.mods.darkconsole.server.TemplateModServer
 import dev.architectury.platform.forge.EventBuses
 import net.minecraftforge.api.distmarker.Dist
 import net.minecraftforge.fml.DistExecutor
@@ -23,6 +23,6 @@ class TemplateForge {
     }
 
     companion object {
-        const val modId = "template"
+        const val modId = "dark_console"
     }
 }
