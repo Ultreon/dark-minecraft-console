@@ -17,6 +17,8 @@ dependencies {
 
     implementation "com.formdev:flatlaf:$flatlaf_version"
     implementation "com.formdev:flatlaf-intellij-themes:$flatlaf_version"
+    implementation "com.formdev:flatlaf-extras:$flatlaf_version"
+    implementation "com.miglayout:miglayout-swing:11.0"
 
     modCompileOnly "curse.maven:forgeapiportfabric-547434:3671141"
     modCompileOnly 'com.electronwill.night-config:core:3.6.3'

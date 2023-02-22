@@ -79,6 +79,8 @@ dependencies {
 
     include forgeRuntimeLibrary("com.formdev:flatlaf:$flatlaf_version")
     include forgeRuntimeLibrary("com.formdev:flatlaf-intellij-themes:$flatlaf_version")
+    include forgeRuntimeLibrary("com.formdev:flatlaf-extras:$flatlaf_version")
+    include forgeRuntimeLibrary("com.miglayout:miglayout-swing:11.0")
 
     // Adds KFF as dependency and Kotlin libs
     modImplementation 'thedarkcolour:kotlinforforge:3.8.0'

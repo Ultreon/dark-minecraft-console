@@ -87,6 +87,8 @@ dependencies {
 
     include implementation("com.formdev:flatlaf:$flatlaf_version")
     include implementation("com.formdev:flatlaf-intellij-themes:$flatlaf_version")
+    include implementation("com.formdev:flatlaf-extras:$flatlaf_version")
+    include implementation("com.miglayout:miglayout-swing:11.0")
 
     // Essential mods.
     modImplementation "com.terraformersmc:modmenu:5.0.2", {
