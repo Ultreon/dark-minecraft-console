@@ -22,13 +22,13 @@
     "main": [
       {
         "adapter": "kotlin",
-        "value": "com.ultreon.mods.darkconsole.fabric.TemplateFabric"
+        "value": "com.ultreon.mods.darkconsole.fabric.DarkConsoleFabric"
       }
     ],
     "server": [
       {
         "adapter": "kotlin",
-        "value": "com.ultreon.mods.darkconsole.fabric.TemplateFabricServer"
+        "value": "com.ultreon.mods.darkconsole.fabric.DarkConsoleFabricServer"
       }
     ]
   },

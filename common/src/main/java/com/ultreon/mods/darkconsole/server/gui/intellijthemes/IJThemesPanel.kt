@@ -27,6 +27,7 @@ import com.formdev.flatlaf.extras.FlatAnimatedLafChange
 import com.formdev.flatlaf.extras.FlatSVGIcon
 import com.formdev.flatlaf.util.LoggingFacade
 import com.formdev.flatlaf.util.StringUtils
+import com.ultreon.mods.darkconsole.experiments.ThemeManagerExperiment
 import com.ultreon.mods.darkconsole.server.gui.AppPrefs
 import com.ultreon.mods.darkconsole.server.gui.Settings
 import net.miginfocom.swing.MigLayout
@@ -54,6 +55,7 @@ import javax.swing.event.ListSelectionEvent
 /**
  * @author Karl Tauber
  */
+@ThemeManagerExperiment
 class IJThemesPanel : JPanel() {
     private val themesManager = IJThemesManager()
     private val themes: MutableList<IJThemeInfo> = ArrayList()
@@ -203,11 +205,13 @@ class IJThemesPanel : JPanel() {
         }
     }
 
+    @ThemeManagerExperiment
     fun selectPreviousTheme() {
         val sel = themesList!!.selectedIndex
         if (sel > 0) themesList!!.selectedIndex = sel - 1
     }
 
+    @ThemeManagerExperiment
     fun selectNextTheme() {
         val sel = themesList!!.selectedIndex
         themesList!!.selectedIndex = sel + 1
@@ -496,8 +500,10 @@ class IJThemesPanel : JPanel() {
         updateThemesList()
     }
 
+    @ThemeManagerExperiment
     companion object {
         @Suppress("SpellCheckingInspection")
+        @ThemeManagerExperiment
         const val THEMES_PACKAGE = "/com/formdev/flatlaf/intellijthemes/themes/"
     }
 }

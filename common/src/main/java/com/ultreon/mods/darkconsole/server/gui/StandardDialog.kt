@@ -44,6 +44,7 @@
 
 package com.ultreon.mods.darkconsole.server.gui
 
+import com.ultreon.mods.darkconsole.experiments.ThemeManagerExperiment
 import java.awt.Dialog
 import java.awt.Frame
 import java.awt.event.ActionEvent
@@ -57,6 +58,7 @@ import javax.swing.JPanel
  *
  * @author David Gilbert
  */
+@ThemeManagerExperiment
 open class StandardDialog : JDialog, ActionListener {
     /**
      * Returns a flag that indicates whether the dialog has been
@@ -65,6 +67,7 @@ open class StandardDialog : JDialog, ActionListener {
      * @return boolean.
      */
     /** Flag that indicates whether the dialog was cancelled.  */
+    @ThemeManagerExperiment
     var isCancelled: Boolean
         private set
 
@@ -75,6 +78,7 @@ open class StandardDialog : JDialog, ActionListener {
      * @param title  the title.
      * @param modal  modal?
      */
+    @ThemeManagerExperiment
     constructor(
         owner: Frame?, title: String?,
         modal: Boolean
@@ -89,6 +93,7 @@ open class StandardDialog : JDialog, ActionListener {
      * @param title  the title.
      * @param modal  modal?
      */
+    @ThemeManagerExperiment
     constructor(
         owner: Dialog?, title: String?,
         modal: Boolean
@@ -101,6 +106,7 @@ open class StandardDialog : JDialog, ActionListener {
      *
      * @param event  the event.
      */
+    @ThemeManagerExperiment
     override fun actionPerformed(event: ActionEvent) {
         when (event.actionCommand) {
             "helpButton" -> {
@@ -125,6 +131,7 @@ open class StandardDialog : JDialog, ActionListener {
      *
      * @return the button panel.
      */
+    @ThemeManagerExperiment
     protected open fun createButtonPanel(): JPanel {
         val buttons = L1R2ButtonPanel(
             "Help",

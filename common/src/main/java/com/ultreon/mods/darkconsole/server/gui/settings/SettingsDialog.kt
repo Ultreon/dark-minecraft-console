@@ -3,19 +3,32 @@
 package com.ultreon.mods.darkconsole.server.gui.settings
 
 import com.ultreon.mods.darkconsole.server.gui.StandardDialog
+import com.ultreon.mods.darkconsole.experiments.ThemeManagerExperiment
 import java.awt.BorderLayout
 import java.awt.Dialog
 import java.awt.Dimension
 import java.awt.Frame
 import javax.swing.JPanel
 
+/**
+ * Settings dialog, yeah, literally.
+ */
+@ThemeManagerExperiment
 class SettingsDialog : StandardDialog {
     private lateinit var settingsPanel: SettingsPanel
 
-    constructor(owner: Frame?, title: String?, modal: Boolean) : super(owner, title, modal) {
+    /**
+     * Construct the dialog with a frame as parent.
+     */
+    @ThemeManagerExperiment
+    constructor(owner: Frame? = null, title: String?, modal: Boolean) : super(owner, title, modal) {
         contentPane = createContent()
     }
 
+    /**
+     * Construct the dialog with another dialog as parent.
+     */
+    @ThemeManagerExperiment
     constructor(owner: Dialog?, title: String?, modal: Boolean) : super(owner, title, modal) {
         contentPane = createContent()
     }

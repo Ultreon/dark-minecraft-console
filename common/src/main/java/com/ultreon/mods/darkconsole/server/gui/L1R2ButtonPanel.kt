@@ -1,11 +1,6 @@
 package com.ultreon.mods.darkconsole.server.gui
 
-import java.awt.BorderLayout
-import java.awt.GridLayout
-import javax.swing.JButton
-import javax.swing.JPanel
-
-/*
+/**
  * JCommon : a free general purpose class library for the Java(tm) platform
  *
  *
@@ -50,6 +45,10 @@ import javax.swing.JPanel
  *               Jess Thrysoee (DG);
  *
  */
+import java.awt.BorderLayout
+import java.awt.GridLayout
+import javax.swing.JButton
+import javax.swing.JPanel
 
 /**
  * A 'ready-made' panel that has one button on the left and two buttons on the right - nested

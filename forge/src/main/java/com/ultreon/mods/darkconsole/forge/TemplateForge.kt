@@ -2,9 +2,8 @@
 
 package com.ultreon.mods.darkconsole.forge
 
-import com.ultreon.mods.darkconsole.TemplateMod
-import com.ultreon.mods.darkconsole.client.TemplateModClient
-import com.ultreon.mods.darkconsole.server.TemplateModServer
+import com.ultreon.mods.darkconsole.DarkConsoleMod
+import com.ultreon.mods.darkconsole.server.DarkConsoleModServer
 import dev.architectury.platform.forge.EventBuses
 import net.minecraftforge.api.distmarker.Dist
 import net.minecraftforge.fml.DistExecutor
@@ -16,10 +15,9 @@ class TemplateForge {
     init {
         EventBuses.registerModEventBus(modId, KotlinModLoadingContext.get().getKEventBus())
 
-        TemplateMod.init()
+        DarkConsoleMod.init()
 
-        DistExecutor.unsafeRunWhenOn(Dist.CLIENT) { Runnable { TemplateModClient.init() } }
-        DistExecutor.unsafeRunWhenOn(Dist.DEDICATED_SERVER) { Runnable { TemplateModServer.init() } }
+        DistExecutor.unsafeRunWhenOn(Dist.DEDICATED_SERVER) { Runnable { DarkConsoleModServer.init() } }
     }
 
     companion object {

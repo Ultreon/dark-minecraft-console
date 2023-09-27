@@ -1,11 +1,11 @@
 package com.ultreon.mods.darkconsole.fabric
 
-import com.ultreon.mods.darkconsole.server.TemplateModServer
+import com.ultreon.mods.darkconsole.server.DarkConsoleModServer
 import net.fabricmc.api.DedicatedServerModInitializer
 
 @Suppress("unused")
-object TemplateFabricServer : DedicatedServerModInitializer {
+object DarkConsoleFabricServer : DedicatedServerModInitializer {
     override fun onInitializeServer() {
-        TemplateModServer.init()
+        DarkConsoleModServer.init()
     }
 }

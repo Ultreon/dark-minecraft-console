@@ -3,7 +3,8 @@
 package com.ultreon.mods.darkconsole.server.gui.settings
 
 import com.ultreon.mods.darkconsole.server.gui.intellijthemes.IJThemesPanel
-import com.ultreon.mods.darkconsole.TemplateMod
+import com.ultreon.mods.darkconsole.DarkConsoleMod
+import com.ultreon.mods.darkconsole.experiments.ThemeManagerExperiment
 import java.awt.Component
 import java.awt.Container
 import java.awt.LayoutManager
@@ -11,7 +12,7 @@ import javax.swing.JPanel
 import javax.swing.Spring
 import javax.swing.SpringLayout
 
-
+@ThemeManagerExperiment
 class SettingsPanel : JPanel {
     private var themeComboBox: IJThemesPanel
 
@@ -26,7 +27,7 @@ class SettingsPanel : JPanel {
         layout = SpringLayout()
 
 //        val label = JLabel("Theme:")
-        themeComboBox = TemplateMod.themesPanel
+        themeComboBox = DarkConsoleMod.themesPanel
 //        label.labelFor = themeComboBox
 
 //        add(label)
@@ -43,6 +44,7 @@ class SettingsPanel : JPanel {
      * A debugging utility that prints to stdout the component's minimum,
      * preferred, and maximum sizes.
      */
+    @ThemeManagerExperiment
     fun printSizes(c: Component) {
         println("minimumSize = " + c.minimumSize)
         println("preferredSize = " + c.preferredSize)
@@ -62,6 +64,7 @@ class SettingsPanel : JPanel {
      * @param xPad x-padding between cells
      * @param yPad y-padding between cells
      */
+    @ThemeManagerExperiment
     fun makeGrid(parent: Container, rows: Int, cols: Int, initialX: Int, initialY: Int, xPad: Int, yPad: Int) {
         val layout: SpringLayout = try {
             parent.layout as SpringLayout
@@ -149,6 +152,7 @@ class SettingsPanel : JPanel {
      * @param xPad x-padding between cells
      * @param yPad y-padding between cells
      */
+    @ThemeManagerExperiment
     fun makeCompactGrid(parent: Container, rows: Int, cols: Int, initialX: Int, initialY: Int, xPad: Int, yPad: Int) {
         val layout: SpringLayout = try {
             parent.layout as SpringLayout

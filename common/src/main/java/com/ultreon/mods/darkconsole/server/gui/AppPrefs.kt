@@ -1,21 +1,29 @@
 package com.ultreon.mods.darkconsole.server.gui
 
+import com.ultreon.mods.darkconsole.experiments.ThemeManagerExperiment
 import java.util.prefs.Preferences
 
 /**
- * @author Karl Tauber
+ * @author Karl Tauber (drastically modified by Qboi)
  */
+@ThemeManagerExperiment
 @Suppress("MemberVisibilityCanBePrivate")
 object AppPrefs {
     private const val APP_ID: String = "com.ultreon.mods.darkconsole"
-    const val KEY_LAF = "$APP_ID.laf"
-    const val KEY_LAF_THEME = "$APP_ID.lafTheme"
-    const val RESOURCE_PREFIX = "res:"
-    const val FILE_PREFIX = "file:"
-    const val THEME_UI_KEY = "$APP_ID.theme"
+    @ThemeManagerExperiment const val KEY_LAF = "$APP_ID.laf"
+    @ThemeManagerExperiment const val KEY_LAF_THEME = "$APP_ID.lafTheme"
+    @ThemeManagerExperiment const val RESOURCE_PREFIX = "res:"
+    @ThemeManagerExperiment const val FILE_PREFIX = "file:"
+    @ThemeManagerExperiment const val THEME_UI_KEY = "$APP_ID.theme"
+
+    @ThemeManagerExperiment
     lateinit var state: Preferences
         private set
 
+    /**
+     * App preferences initialization.
+     */
+    @ThemeManagerExperiment
     fun init(rootPath: String?) {
         state = Preferences.userRoot().node(rootPath)
     }

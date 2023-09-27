@@ -12,12 +12,11 @@
 
 package com.ultreon.mods.darkconsole.mixin.common;
 
+import com.ultreon.mods.darkconsole.server.DarkConsoleModServer;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.gui.StatsComponent;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.Redirect;
+import org.spongepowered.asm.mixin.injection.*;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import javax.swing.*;
@@ -30,9 +29,17 @@ public abstract class StatsComponentMixin extends JComponent {
         return new Color(0x00000000, true);
     }
 
+    @Inject(method = "paint", at = @At(value = "INVOKE", target = "Ljava/awt/Graphics;setColor(Ljava/awt/Color;)V"), remap = false)
+    public void essentials$injectFont(Graphics graphics, CallbackInfo ci) {
+        ((Graphics2D)graphics).setRenderingHint(RenderingHints.KEY_TEXT_ANTIALIASING, RenderingHints.VALUE_TEXT_ANTIALIAS_ON);
+        ((Graphics2D)graphics).setRenderingHint(RenderingHints.KEY_TEXT_LCD_CONTRAST, 120);
+        graphics.setFont(DarkConsoleModServer.font);
+    }
+
     @Inject(method = "<init>", at = @At(value = "RETURN"))
     private void essentials$replaceBackground1(MinecraftServer pServer, CallbackInfo ci) {
         setBackground(new Color(0x00000000, true));
+        setFont(DarkConsoleModServer.font);
     }
 
     @Redirect(method = "paint", at = @At(value = "NEW", target = "java/awt/Color", ordinal = 1, remap = false), remap = false)
