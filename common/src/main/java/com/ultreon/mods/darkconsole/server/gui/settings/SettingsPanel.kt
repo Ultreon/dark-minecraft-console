@@ -2,9 +2,8 @@
 
 package com.ultreon.mods.darkconsole.server.gui.settings
 
-import com.ultreon.mods.darkconsole.server.gui.intellijthemes.IJThemesPanel
-import com.ultreon.mods.darkconsole.DarkConsoleMod
 import com.ultreon.mods.darkconsole.experiments.ThemeManagerExperiment
+import com.ultreon.mods.darkconsole.server.gui.intellijthemes.IJThemesPanel
 import java.awt.Component
 import java.awt.Container
 import java.awt.LayoutManager
@@ -26,11 +25,7 @@ class SettingsPanel : JPanel {
 
         layout = SpringLayout()
 
-//        val label = JLabel("Theme:")
-        themeComboBox = DarkConsoleMod.themesPanel
-//        label.labelFor = themeComboBox
-
-//        add(label)
+        themeComboBox = IJThemesPanel()
         add(themeComboBox)
 
         //Lay out the panel.

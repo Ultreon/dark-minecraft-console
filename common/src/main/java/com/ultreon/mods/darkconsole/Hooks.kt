@@ -2,9 +2,9 @@ package com.ultreon.mods.darkconsole
 
 import com.formdev.flatlaf.extras.FlatAnimatedLafChange
 import com.formdev.flatlaf.themes.FlatMacDarkLaf
+import com.ultreon.mods.darkconsole.experiments.ThemeManagerExperiment
 import com.ultreon.mods.darkconsole.mixin.common.MinecraftServerGuiMixin
 import com.ultreon.mods.darkconsole.server.gui.settings.SettingsDialog
-import com.ultreon.mods.darkconsole.experiments.ThemeManagerExperiment
 import net.minecraft.server.dedicated.DedicatedServer
 import java.awt.event.ActionEvent
 import javax.swing.AbstractAction
@@ -27,7 +27,7 @@ object Hooks {
         fileMenu.addSeparator()
         fileMenu.add(object : AbstractAction("Stop Server") {
             override fun actionPerformed(e: ActionEvent) {
-                dedicatedServer.execute { dedicatedServer.stopServer() }
+                dedicatedServer.execute { dedicatedServer.halt(false) }
             }
         })
         menuBar.add(fileMenu)

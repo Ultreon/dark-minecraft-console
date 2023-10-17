@@ -1,13 +1,12 @@
 package com.ultreon.mods.darkconsole.server
 
-import com.ultreon.mods.darkconsole.DarkConsoleMod
-import dev.architectury.event.events.common.LifecycleEvent
+import com.ultreon.mods.darkconsole.experiments.ThemeManagerExperiment
+import com.ultreon.mods.darkconsole.server.gui.AppPrefs
 import java.awt.Font
-import java.awt.GraphicsEnvironment
 
 /**
  * Dark Console Mod - Server side initialization.
- * @author Qboi
+ * @author XyperCode
  * @since 0.1.0
  */
 object DarkConsoleModServer {
@@ -16,11 +15,8 @@ object DarkConsoleModServer {
     /**
      * Initializer
      */
+    @OptIn(ThemeManagerExperiment::class)
     fun init() {
-        LifecycleEvent.SETUP.register(::setup)
-    }
-
-    private fun setup() {
-        // No setup (yet)
+        AppPrefs.init("com.ultreon.mods.darkconsole")
     }
 }

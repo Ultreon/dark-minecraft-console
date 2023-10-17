@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/dark-minecraft-console.common.iml" filepath="$PROJECT_DIR$/.idea/modules/common/dark-minecraft-console.common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/dark-minecraft-console.common.main.iml" filepath="$PROJECT_DIR$/.idea/modules/common/dark-minecraft-console.common.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/dark-minecraft-console.common.test.iml" filepath="$PROJECT_DIR$/.idea/modules/common/dark-minecraft-console.common.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/fabric/dark-minecraft-console.fabric.main.iml" filepath="$PROJECT_DIR$/.idea/modules/fabric/dark-minecraft-console.fabric.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/fabric/dark-minecraft-console.fabric.test.iml" filepath="$PROJECT_DIR$/.idea/modules/fabric/dark-minecraft-console.fabric.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/forge/dark-minecraft-console.forge.main.iml" filepath="$PROJECT_DIR$/.idea/modules/forge/dark-minecraft-console.forge.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/forge/dark-minecraft-console.forge.test.iml" filepath="$PROJECT_DIR$/.idea/modules/forge/dark-minecraft-console.forge.test.iml" />
+    </modules>
+  </component>
+</project>

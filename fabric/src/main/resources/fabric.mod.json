@@ -2,13 +2,13 @@
   "schemaVersion": 1,
   "id": "dark_console",
   "version": "${version}",
-  "name": "Dark Minecraft Console",
+  "name": "Dark Server Console",
   "description": "Makes the Minecraft server console use dark mode.",
   "authors": [
     "Ultreon Team"
   ],
   "contributors": [
-    "Qboi"
+    "XyperCode"
   ],
   "contact": {
     "website": "https://ultreon.github.io/",
@@ -36,12 +36,12 @@
     "dark-console.mixins.json",
     "dark-console-common.mixins.json"
   ],
-  "recommends": {
-    "modmenu": ">=5.0.0"
+  "suggests": {
+    "modmenu": "*"
   },
   "depends": {
     "fabric-language-kotlin": ">=1.9.0+kotlin.3.8.0",
     "fabricloader": ">=0.14.12",
-    "minecraft": ">=1.19.3"
+    "minecraft": ">=1.20 <1.20.2"
   }
 }

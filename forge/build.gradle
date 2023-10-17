@@ -69,18 +69,18 @@ repositories {
 
 dependencies {
     forge "net.minecraftforge:forge:${rootProject.forge_version}"
-    // Remove the next line if you don't want to depend on the API
-    modApi "dev.architectury:architectury-forge:${rootProject.architectury_version}"
-
-    modApi "com.github.Ultreon.ultreonlib:ultreon-lib-forge:$ultreonlib_version"
 
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":common", configuration: "transformProductionForge")) { transitive = false }
 
-    include forgeRuntimeLibrary("com.formdev:flatlaf:$flatlaf_version")
-    include forgeRuntimeLibrary("com.formdev:flatlaf-intellij-themes:$flatlaf_version")
-    include forgeRuntimeLibrary("com.formdev:flatlaf-extras:$flatlaf_version")
+    include implementation("com.formdev:flatlaf:$flatlaf_version")
+    include implementation("com.formdev:flatlaf-intellij-themes:$flatlaf_version")
+    include implementation("com.formdev:flatlaf-extras:$flatlaf_version")
+    include implementation("com.formdev:flatlaf-swingx:$flatlaf_version")
     include forgeRuntimeLibrary("com.miglayout:miglayout-swing:11.0")
+    include forgeRuntimeLibrary("com.miglayout:miglayout-core:11.0")
+    include "org.swinglabs.swingx:swingx-all:1.6.5-1"
+    include 'com.kitfox.svg:svg-salamander:1.0'
 
     // Adds KFF as dependency and Kotlin libs
     modImplementation 'thedarkcolour:kotlinforforge:3.8.0'
@@ -110,6 +110,18 @@ remapJar {
 
 jar {
     classifier "dev"
+    manifest {
+        attributes([
+                "Specification-Title"     : "Dark Server Console",
+                "Specification-Vendor"    : "Ultreon Team",
+                "Specification-Version"   : "1", // We are version 1 of ourselves
+                "Implementation-Title"    : project.name,
+                "Implementation-Version"  : project.jar.archiveVersion,
+                "Implementation-Vendor"   : "Ultreon Team",
+                "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
+                "MixinConfigs"           : "dark-console-common.mixins.json"
+        ])
+    }
 }
 
 sourcesJar {

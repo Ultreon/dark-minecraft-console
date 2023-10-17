@@ -1,0 +1,11 @@
+{
+  "homepage": "http://curseforge.com/minecraft/mc-mods//",
+  "promos": {
+    "1.8-latest": "11.14.3.1543",
+    "1.8-recommended": "11.14.3.1450"
+  },
+  "1.8": {
+    "11.14.3.1543": "fry: Fix color multiplier applied incorrectly for items.\nfry: OBJ loader: fixed another whitespace-related issue; removed unused "modifyUVs" property for now; added the "flip-v" property to switch between OpenGL-style and DirextX-style model UVs; fixed normals - they are now correct in-world, still a bit strange for the items; fixed normals a little bit for B3D models too.",
+    "11.14.3.1532": "fry: Fixed normal calculation for vanilla models, fixed the grass darkening and simular issues.\nfry: More lighting fixes, flat lighting now works correctly for grass and torches."
+  }
+}

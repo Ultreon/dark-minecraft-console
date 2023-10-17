@@ -67,20 +67,10 @@ configurations {
 }
 
 dependencies {
-    modImplementation "net.fabricmc:fabric-loader:${rootProject.fabric_loader_version}"
-    modApi "net.fabricmc.fabric-api:fabric-api:${rootProject.fabric_api_version}"
-    // Remove the next line if you don't want to depend on the API
-    modApi "dev.architectury:architectury-fabric:${rootProject.architectury_version}"
-
-    modApi "com.github.Ultreon.ultreonlib:ultreon-lib-fabric:$ultreonlib_version"
+    modImplementation "net.fabricmc:fabric-loader:${fabric_loader_version}"
 
     // Kotlin Libraries & mods
-    modImplementation("net.fabricmc:fabric-language-kotlin:1.9.0+kotlin.1.8.0")
-
-    // Mod dependencies
-    modImplementation "curse.maven:forgeapiportfabric-547434:3946675"
-    modImplementation 'com.electronwill.night-config:core:3.6.5'
-    modImplementation 'com.electronwill.night-config:toml:3.6.5'
+    modImplementation("net.fabricmc:fabric-language-kotlin:$fabric_language_kotlin_version")
 
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":common", configuration: "transformProductionFabric")) { transitive false }
@@ -90,9 +80,12 @@ dependencies {
     include implementation("com.formdev:flatlaf-extras:$flatlaf_version")
     include implementation("com.formdev:flatlaf-swingx:$flatlaf_version")
     include implementation("com.miglayout:miglayout-swing:11.0")
+    include implementation("com.miglayout:miglayout-core:11.0")
+    include "org.swinglabs.swingx:swingx-all:1.6.5-1"
+    include 'com.kitfox.svg:svg-salamander:1.0'
 
     // Essential mods.
-    modImplementation "com.terraformersmc:modmenu:5.0.2", {
+    modImplementation "com.terraformersmc:modmenu:$modmenu_version", {
         exclude module: "fabric-api"
     }
 

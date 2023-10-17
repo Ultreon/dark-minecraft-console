@@ -7,24 +7,24 @@ issueTrackerURL = "https://github.com/Ultreon/dark-minecraft-console/issues" # A
 [[mods]] #mandatory
 modId = "dark_console" # The modid of the mod
 version = "${version}" # The version number of the mod
-displayName = "Dark Console" # A display name for the mod
+displayName = "Dark Server Console" # A display name for the mod
 updateJSONURL="https://github.com/Ultreon/dark-minecraft-console/raw/main/update.json" #optional # A URL to query for updates for this mod. See the JSON update specification <here>
 displayURL = "https://ultreon.github.io/" # A URL for the "homepage" for this mod, displayed in the mod UI
-logoFile = "icon.png" # A file name (in the root of the mod JAR) containing a logo for display
+logoFile = "dark_console.png" # A file name (in the root of the mod JAR) containing a logo for display
 credits="" # A text field displayed in the mod UI
 authors="Me" # A text field displayed in the mod UI
 displayTest="IGNORE_ALL_VERSION" # Display Test controls the display for your mod in the server connection screen
 
 # The description text for the mod (multi line!) (#mandatory)
 description = '''
-A descriptive explanation on what this mod does.
+Makes the Minecraft server console use dark mode.
 '''
 
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.dark_console]] #optional
 modId = "forge" # the modid of the dependency
 mandatory = true # Does this dependency have to exist - if not, ordering below must be specified
-versionRange = "[44,)" #mandatory - The version range of the dependency
+versionRange = "[47,)" #mandatory - The version range of the dependency
 ordering = "NONE" # An ordering relationship for the dependency - BEFORE or AFTER required if the relationship is not mandatory
 side = "SERVER" # Side this dependency is applied on - BOTH, CLIENT or SERVER
 
@@ -32,7 +32,7 @@ side = "SERVER" # Side this dependency is applied on - BOTH, CLIENT or SERVER
 [[dependencies.dark_console]]
 modId = "minecraft"
 mandatory = true
-versionRange = "[1.19.3,1.20)" # This version range declares a minimum of the current minecraft version up to but not including the next major version
+versionRange = "[1.20,1.20.1]" # This version range declares a minimum of the current minecraft version up to but not including the next major version
 ordering = "NONE"
 side = "SERVER"
 

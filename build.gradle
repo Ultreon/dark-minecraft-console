@@ -73,6 +73,10 @@ subprojects {
         // mappings "net.fabricmc:yarn:@YARN_MAPPINGS@:v2"
         // mappings "net.fabricmc:yarn:@YARN_MAPPINGS@:v2"
     }
+
+    processResources {
+        exclude "*.pdn", "*.xcf", "*.ps", "*.ai", "*.tmp", "*.cache"
+    }
 }
 
 allprojects {

@@ -4,7 +4,7 @@ import com.ultreon.mods.darkconsole.experiments.ThemeManagerExperiment
 import java.util.prefs.Preferences
 
 /**
- * @author Karl Tauber (drastically modified by Qboi)
+ * @author Karl Tauber (drastically modified by XyperCode)
  */
 @ThemeManagerExperiment
 @Suppress("MemberVisibilityCanBePrivate")
