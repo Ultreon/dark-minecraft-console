@@ -1,4 +1,4 @@
-# Dark Server Console
+# Dark Server Console [![CircleCI](https://dl.circleci.com/status-badge/img/gh/Ultreon/dark-minecraft-console/tree/1.20.1.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/Ultreon/dark-minecraft-console/tree/1.20.1)
 *Minecraft console in dark mode!*
 
 **Modloader:** [Forge](https://files.minecraftforge.net/), [NeoForge](https://neoforged.net/), [Fabric](https://fabricmc.net/)  
